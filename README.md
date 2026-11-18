@@ -8,3 +8,5 @@ raylib
 emsdk
 
 cmake
+
+MinGW gcc
