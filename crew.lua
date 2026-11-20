@@ -13,11 +13,11 @@ function addCommand(command)
 end
 
 function exists(path)
-    code = os.execute("if exist " .. path .. " \\NUL (exit 0) else (exit 1)")
+    code = os.execute("if exist " .. path .. "\\NUL (exit 0) else (exit 1)")
     if code == 0 then
-        return false
-    else
         return true
+    else
+        return false
     end
 end
 
@@ -51,5 +51,3 @@ for line in io.lines(file) do
 end
 
 os.execute(run)
-
-io.write()
